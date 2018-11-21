@@ -44,15 +44,38 @@
     <img src="https://www.tecnoblog.info/wp-content/uploads/2017/11/Como-imprimir-el-contenido-de-un-array-en-PHP-www.tecnoblog.info_-1024x576.jpg" width="400" >
     <img src="images/php-logo.svg" title="PHP logo" alt="Картинка с PHPlogo">
 
-    <table>
+    <table border="1" align="center">
+        <caption>Table 1</caption>
+        <thead>
+            <tr>
+                <th colspan="3"> head 1</th>
+            </tr>
+            <tr>
+                <th> head 1</th>
+                <th> head 1</th>
+                <th> head 1</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td> tab2.1</td>
+                <td rowspan="2"> tab2.2-3.2</td>
+                <td> tab2.3</td>
+            </tr>
+            <tr>
+                <td> tab3.1</td>
+                <td> tab3.3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
         <tr>
-            <td> tab1.1</td>
-            <td> tab1.2</td>
+            <td> foot</td>
+            <td> foot</td>
+            <td> foot</td>
         </tr>
-        <tr>
-            <td> tab2.1</td>
-            <td> tab2.2</td>
-        </tr>
+        </tfoot>
     </table>
 
 
