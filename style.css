@@ -1,14 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body{
+    font-family: Roboto+Condensed, Timme, Jamrul, AnjaliOldLipi, Serif, sans-serif;
+    font-size: 14px
+}
+h1{
+    color: red;
+    text-align: center;
+}
+h2{
+    color: green;
+}
+ol{
+    color: red;
+}
+em{
+    color: blue;
+}
+ul{
+    font-style: italic;
+    color: #924763;
+}
+b{
+    color: red;
+    font-size: 20px;
+}
+i{
+    color: blue;
+    font-weight: bold;
+}
 label{
     display: block;
     width: 300px;
     position: relative;
     line-height: 2em;
+    font-weight: bold; /* Жирность шрифта */
+    font-style: italic; /* Наклон шрифта */
+    color: rgba(156, 124, 0, 0.83); /* Код или цвет текста */
 }
 
 label input{
     position:absolute;
     left: 200px;
     top: 5px;
+    color: #ffa163;
 }
 label.checkbox{
     padding-left: 195px;
@@ -16,8 +51,16 @@ label.checkbox{
 label.checkbox input{
     position: static;
 }
+/* Comment *
+    Основные свойста для шрифтов
+    body
+ */
 label.textarea textarea{
     width: 400px;
     height: 4em;
     resize: none;
+}
+
+button{
+    background-color: fuchsia;
 }
