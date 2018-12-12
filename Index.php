@@ -36,5 +36,5 @@ if(isset($_POST['name'])){
 }
 
 
-include 'Form.html.php';
+include 'InputForm.html.php';
 

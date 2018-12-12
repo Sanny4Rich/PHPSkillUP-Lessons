@@ -12,6 +12,7 @@ function checkEmpty($fieldName, $errorMassage) {
 }
 }
 
+
 function saveUser($values) {
     $file = fopen(DATA_FILE_NAME, 'a');
     fputs($file, implode("\t", $values)."\n");
