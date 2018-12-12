@@ -1,40 +1,27 @@
 <?php
 
-require 'Functions.php';
+use Data\User; //* Пространство имени ,для большого количества классов
+use Data\Worker as Work; //* Псевдоним для пространства имени
 
-var_dump($_POST);
+header('Content-Type: text/plain; charset=utf-8');
 
-$userAdded = false;
-
-$values = [
-    'name' => '',
-    'email' => '',
-    'password' => '',
-    'checked' => 0
-];
-
-
-if(isset($_POST['name'])){
-    $errors = [];
-
-    checkEmpty('name', 'Введите имя');
-    checkEmpty('email','Введите Email');
-
-        if (empty($errors['email']) && strpos($values['email'], '@') === false){
-        $errors['email'] = 'Email должен содержать @';
+    function classLoader($class) {
+        $class = substr($class, 5);
+        $filename = __DIR__ . '/classes/' . $class . '.php';
+        require $filename;
     }
-    checkEmpty('password', 'Введите пароль');
 
+    spl_autoload_register('classLoader');
 
-    if(!empty($_POST['checked'])){
-        $values['checked'] = 1;
-    }
-    if(!$errors) {
-        saveUser($values);
-        $userAdded = true;
-    }
-}
+    $user = new User('Aleksandr', new DateTime('1993-04-19' ));
+    echo $user->aboutMe()."\n";
 
+    $user2 = new User('Vika',new DateTime('1993-08-31'));
+    echo $user2->aboutMe()."\n";
 
-include 'InputForm.html.php';
+    $worker1 = new Work( ' Petya', new DateTime('1999-04-04'));
+    $worker1->setSalary(5000)->setName('Sergey');
+    $worker1->setDepartment(Work::DEPARTMENT_QA);
+    echo $worker1->aboutMe()."\n";
 
+    echo Work::whoAmI();
