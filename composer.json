@@ -1,5 +1,9 @@
 {
     "require": {
         "swiftmailer/swiftmailer": "^6.1"
+    },
+
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
     }
 }
