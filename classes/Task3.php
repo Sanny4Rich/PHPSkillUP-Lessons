@@ -6,6 +6,9 @@
  * Time: 17:32
  */
 
+/**
+ * Class Task3
+ */
 class Task3
 {
     /**
